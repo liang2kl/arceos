@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"attr":["def_percpu"],"fn":["get_local_thread_pointer","init","percpu_area_base","percpu_area_base_at","percpu_area_size","set_local_thread_pointer"]};
