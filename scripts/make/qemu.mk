@@ -30,6 +30,12 @@ qemu_args-$(FS) += \
   -device virtio-blk-$(vdev-suffix),drive=disk0 \
   -drive id=disk0,if=none,format=raw,file=$(DISK_IMG)
 
+ifeq ($(FS),n)
+  qemu_args-$(BLOCK_DEV) += \
+    -device virtio-blk-$(vdev-suffix),drive=disk0 \
+    -drive id=disk0,if=none,format=raw,file=$(DISK_IMG)
+endif
+
 qemu_args-$(NET) += -device virtio-net-$(vdev-suffix),netdev=net0
 ifeq ($(NET_DEV), user)
   qemu_args-$(NET) += -netdev user,id=net0,hostfwd=tcp::5555-:5555,hostfwd=udp::5555-:5555

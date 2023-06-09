@@ -1055,6 +1055,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "jbd_perf"
+version = "0.1.0"
+dependencies = [
+ "axdriver",
+ "axlog",
+ "driver_block",
+ "jbd",
+ "libax",
+ "spin 0.7.1",
+]
+
+[[package]]
 name = "jobserver"
 version = "0.1.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"

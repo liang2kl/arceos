@@ -1,0 +1,17 @@
+[package]
+name = "jbd_perf"
+version = "0.1.0"
+authors = ["Liang Yesheng <liang2kl@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libax = { path = "../../../ulib/libax", features = ["alloc"] }
+axdriver = { path = "../../../modules/axdriver", features = ["virtio-blk"] }
+driver_block = { path = "../../../crates/driver_block" }
+jbd = { path = "../../../crates/jbd", features = ["log_debug"] }
+axlog = { path = "../../../modules/axlog" }
+spin = "0.7.0"
+
+["virtio-blk"]
